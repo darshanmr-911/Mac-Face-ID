@@ -1,4 +1,5 @@
 import CoreMedia
+import QuartzCore
 import CoreVideo
 import Foundation
 import Vision
@@ -64,7 +65,7 @@ final class FaceAnalyzer: @unchecked Sendable {
 
             let landmarksRequest = VNDetectFaceLandmarksRequest()
             landmarksRequest.revision = VNDetectFaceLandmarksRequest.currentRevision
-            if VNDetectFaceLandmarksRequest.revision(landmarksRequest.revision, supports: .constellation76Points) {
+            if VNDetectFaceLandmarksRequest.revision(landmarksRequest.revision, supportsConstellation: .constellation76Points) {
                 landmarksRequest.constellation = .constellation76Points
             } else {
                 landmarksRequest.constellation = .constellation65Points
@@ -76,7 +77,7 @@ final class FaceAnalyzer: @unchecked Sendable {
             qualityRequest.inputFaceObservations = [primary]
             try handler.perform([qualityRequest])
             if let quality = qualityRequest.results?.first?.faceCaptureQuality {
-                snapshot.quality = quality.floatValue
+                snapshot.quality = quality
             }
 
             guard let landmarked = landmarksRequest.results?.first else {

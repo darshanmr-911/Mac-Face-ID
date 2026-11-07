@@ -53,9 +53,10 @@ final class FaceImageProcessor: @unchecked Sendable {
     }
 
     private func points(_ region: VNFaceLandmarkRegion2D?, imageSize: CGSize) -> [Point2] {
-        guard let region, region.pointCount > 0, let pointer = region.pointsInImageOfSize(imageSize) else {
+        guard let region, region.pointCount > 0 else {
             return []
         }
+        let pointer = region.__pointsInImage(imageSize: imageSize)
         return (0..<region.pointCount).map { index in
             let point = pointer[index]
             return Point2(x: Float(point.x), y: Float(point.y))

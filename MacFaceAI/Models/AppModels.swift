@@ -6,6 +6,20 @@ enum AuthMethod: String, Codable, Sendable {
     case password
 }
 
+enum AppAppearance: String, Codable, CaseIterable, Sendable {
+    case system
+    case light
+    case dark
+
+    var title: String {
+        switch self {
+        case .system: "System"
+        case .light: "Light"
+        case .dark: "Dark"
+        }
+    }
+}
+
 struct LastAuthResult: Codable, Equatable, Sendable {
     var date: Date
     var success: Bool
@@ -20,13 +34,15 @@ struct AppSettings: Codable, Equatable, Sendable {
     var allowTouchID: Bool
     var successfulAuthentications: Int
     var lastResult: LastAuthResult?
+    var appearance: AppAppearance
 
     static let `default` = AppSettings(
         similarityThreshold: 0.80,
         requireLiveness: true,
         allowTouchID: true,
         successfulAuthentications: 0,
-        lastResult: nil
+        lastResult: nil,
+        appearance: .system
     )
 
     private enum CodingKeys: String, CodingKey {
@@ -35,6 +51,7 @@ struct AppSettings: Codable, Equatable, Sendable {
         case allowTouchID
         case successfulAuthentications
         case lastResult
+        case appearance
     }
 
     init(
@@ -42,13 +59,15 @@ struct AppSettings: Codable, Equatable, Sendable {
         requireLiveness: Bool,
         allowTouchID: Bool,
         successfulAuthentications: Int,
-        lastResult: LastAuthResult?
+        lastResult: LastAuthResult?,
+        appearance: AppAppearance = .system
     ) {
         self.similarityThreshold = similarityThreshold
         self.requireLiveness = requireLiveness
         self.allowTouchID = allowTouchID
         self.successfulAuthentications = successfulAuthentications
         self.lastResult = lastResult
+        self.appearance = appearance
     }
 
     init(from decoder: Decoder) throws {
@@ -59,6 +78,7 @@ struct AppSettings: Codable, Equatable, Sendable {
         allowTouchID = try container.decodeIfPresent(Bool.self, forKey: .allowTouchID) ?? fallback.allowTouchID
         successfulAuthentications = try container.decodeIfPresent(Int.self, forKey: .successfulAuthentications) ?? 0
         lastResult = try container.decodeIfPresent(LastAuthResult.self, forKey: .lastResult)
+        appearance = try container.decodeIfPresent(AppAppearance.self, forKey: .appearance) ?? fallback.appearance
     }
 }
 

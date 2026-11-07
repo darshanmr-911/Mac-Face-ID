@@ -1,0 +1,430 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B00000000000000000000001 /* MacFaceAIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000001 /* MacFaceAIApp.swift */; };
+		B00000000000000000000002 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000002 /* ContentView.swift */; };
+		B00000000000000000000003 /* BiometricAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000003 /* BiometricAuthService.swift */; };
+		B00000000000000000000004 /* PasswordService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000004 /* PasswordService.swift */; };
+		B00000000000000000000005 /* CameraEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000005 /* CameraEngine.swift */; };
+		B00000000000000000000006 /* CameraService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000006 /* CameraService.swift */; };
+		B00000000000000000000007 /* FaceAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000007 /* FaceAnalyzer.swift */; };
+		B00000000000000000000008 /* FaceEmbedder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000008 /* FaceEmbedder.swift */; };
+		B00000000000000000000009 /* FaceGeometry.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000009 /* FaceGeometry.swift */; };
+		B0000000000000000000000A /* FaceImageProcessor.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000000000000000000000A /* FaceImageProcessor.swift */; };
+		B0000000000000000000000B /* LivenessDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000000000000000000000B /* LivenessDetector.swift */; };
+		B0000000000000000000000C /* MatchPolicy.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000000000000000000000C /* MatchPolicy.swift */; };
+		B0000000000000000000000D /* Similarity.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000000000000000000000D /* Similarity.swift */; };
+		B0000000000000000000000E /* AppModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000000000000000000000E /* AppModels.swift */; };
+		B0000000000000000000000F /* KeychainStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0000000000000000000000F /* KeychainStore.swift */; };
+		B00000000000000000000010 /* TemplateCrypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000010 /* TemplateCrypto.swift */; };
+		B00000000000000000000011 /* AuditLogStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000011 /* AuditLogStore.swift */; };
+		B00000000000000000000012 /* EncryptedTemplateStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000012 /* EncryptedTemplateStore.swift */; };
+		B00000000000000000000013 /* FaceLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000013 /* FaceLibrary.swift */; };
+		B00000000000000000000014 /* SettingsStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000014 /* SettingsStore.swift */; };
+		B00000000000000000000015 /* AppPaths.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000015 /* AppPaths.swift */; };
+		B00000000000000000000016 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000016 /* Assets.xcassets */; };
+		B00000000000000000000017 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A00000000000000000000017 /* SwiftUI.framework */; };
+		B00000000000000000000018 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A00000000000000000000018 /* AVFoundation.framework */; };
+		B00000000000000000000019 /* Vision.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A00000000000000000000019 /* Vision.framework */; };
+		B0000000000000000000001A /* CoreML.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0000000000000000000001A /* CoreML.framework */; };
+		B0000000000000000000001B /* LocalAuthentication.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0000000000000000000001B /* LocalAuthentication.framework */; };
+		B0000000000000000000001C /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0000000000000000000001C /* Security.framework */; };
+		B0000000000000000000001D /* CryptoKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A0000000000000000000001D /* CryptoKit.framework */; };
+		B0000000000000000000001E /* CameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000020 /* CameraPreview.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A00000000000000000000001 /* MacFaceAIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacFaceAIApp.swift; sourceTree = "<group>"; };
+		A00000000000000000000002 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A00000000000000000000003 /* BiometricAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricAuthService.swift; sourceTree = "<group>"; };
+		A00000000000000000000004 /* PasswordService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordService.swift; sourceTree = "<group>"; };
+		A00000000000000000000005 /* CameraEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraEngine.swift; sourceTree = "<group>"; };
+		A00000000000000000000006 /* CameraService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraService.swift; sourceTree = "<group>"; };
+		A00000000000000000000007 /* FaceAnalyzer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceAnalyzer.swift; sourceTree = "<group>"; };
+		A00000000000000000000008 /* FaceEmbedder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceEmbedder.swift; sourceTree = "<group>"; };
+		A00000000000000000000009 /* FaceGeometry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceGeometry.swift; sourceTree = "<group>"; };
+		A0000000000000000000000A /* FaceImageProcessor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceImageProcessor.swift; sourceTree = "<group>"; };
+		A0000000000000000000000B /* LivenessDetector.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LivenessDetector.swift; sourceTree = "<group>"; };
+		A0000000000000000000000C /* MatchPolicy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MatchPolicy.swift; sourceTree = "<group>"; };
+		A0000000000000000000000D /* Similarity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Similarity.swift; sourceTree = "<group>"; };
+		A0000000000000000000000E /* AppModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppModels.swift; sourceTree = "<group>"; };
+		A0000000000000000000000F /* KeychainStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainStore.swift; sourceTree = "<group>"; };
+		A00000000000000000000010 /* TemplateCrypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemplateCrypto.swift; sourceTree = "<group>"; };
+		A00000000000000000000011 /* AuditLogStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuditLogStore.swift; sourceTree = "<group>"; };
+		A00000000000000000000012 /* EncryptedTemplateStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EncryptedTemplateStore.swift; sourceTree = "<group>"; };
+		A00000000000000000000013 /* FaceLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceLibrary.swift; sourceTree = "<group>"; };
+		A00000000000000000000014 /* SettingsStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsStore.swift; sourceTree = "<group>"; };
+		A00000000000000000000015 /* AppPaths.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppPaths.swift; sourceTree = "<group>"; };
+		A00000000000000000000016 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A00000000000000000000017 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		A00000000000000000000018 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		A00000000000000000000019 /* Vision.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Vision.framework; path = System/Library/Frameworks/Vision.framework; sourceTree = SDKROOT; };
+		A0000000000000000000001A /* CoreML.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreML.framework; path = System/Library/Frameworks/CoreML.framework; sourceTree = SDKROOT; };
+		A0000000000000000000001B /* LocalAuthentication.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = LocalAuthentication.framework; path = System/Library/Frameworks/LocalAuthentication.framework; sourceTree = SDKROOT; };
+		A0000000000000000000001C /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		A0000000000000000000001D /* CryptoKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CryptoKit.framework; path = System/Library/Frameworks/CryptoKit.framework; sourceTree = SDKROOT; };
+		A0000000000000000000001E /* MacFaceAI.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacFaceAI.entitlements; sourceTree = "<group>"; };
+		A0000000000000000000001F /* MacFaceAI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacFaceAI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A00000000000000000000020 /* CameraPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreview.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E00000000000000000000001 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B00000000000000000000017 /* SwiftUI.framework in Frameworks */,
+				B00000000000000000000018 /* AVFoundation.framework in Frameworks */,
+				B00000000000000000000019 /* Vision.framework in Frameworks */,
+				B0000000000000000000001A /* CoreML.framework in Frameworks */,
+				B0000000000000000000001B /* LocalAuthentication.framework in Frameworks */,
+				B0000000000000000000001C /* Security.framework in Frameworks */,
+				B0000000000000000000001D /* CryptoKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F00000000000000000000001 = {
+			isa = PBXGroup;
+			children = (
+				F00000000000000000000002 /* MacFaceAI */,
+				F00000000000000000000010 /* Config */,
+				F00000000000000000000011 /* Frameworks */,
+				F00000000000000000000012 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F00000000000000000000002 /* MacFaceAI */ = {
+			isa = PBXGroup;
+			children = (
+				F00000000000000000000003 /* Authentication */,
+				F00000000000000000000004 /* Camera */,
+				F00000000000000000000005 /* FaceRecognition */,
+				F00000000000000000000006 /* Models */,
+				F00000000000000000000007 /* Resources */,
+				F00000000000000000000008 /* Security */,
+				F00000000000000000000009 /* Services */,
+				F0000000000000000000000A /* Utilities */,
+				A00000000000000000000001 /* MacFaceAIApp.swift */,
+				A00000000000000000000002 /* ContentView.swift */,
+			);
+			path = MacFaceAI;
+			sourceTree = "<group>";
+		};
+		F00000000000000000000003 /* Authentication */ = {
+			isa = PBXGroup;
+			children = (
+				A00000000000000000000003 /* BiometricAuthService.swift */,
+				A00000000000000000000004 /* PasswordService.swift */,
+			);
+			path = Authentication;
+			sourceTree = "<group>";
+		};
+		F00000000000000000000004 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				A00000000000000000000005 /* CameraEngine.swift */,
+				A00000000000000000000006 /* CameraService.swift */,
+				A00000000000000000000020 /* CameraPreview.swift */,
+			);
+			path = Camera;
+			sourceTree = "<group>";
+		};
+		F00000000000000000000005 /* FaceRecognition */ = {
+			isa = PBXGroup;
+			children = (
+				A00000000000000000000007 /* FaceAnalyzer.swift */,
+				A00000000000000000000008 /* FaceEmbedder.swift */,
+				A00000000000000000000009 /* FaceGeometry.swift */,
+				A0000000000000000000000A /* FaceImageProcessor.swift */,
+				A0000000000000000000000B /* LivenessDetector.swift */,
+				A0000000000000000000000C /* MatchPolicy.swift */,
+				A0000000000000000000000D /* Similarity.swift */,
+			);
+			path = FaceRecognition;
+			sourceTree = "<group>";
+		};
+		F00000000000000000000006 /* Models */ = {
+			isa = PBXGroup;
+			children = (A0000000000000000000000E /* AppModels.swift */,);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F00000000000000000000007 /* Resources */ = {
+			isa = PBXGroup;
+			children = (A00000000000000000000016 /* Assets.xcassets */,);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F00000000000000000000008 /* Security */ = {
+			isa = PBXGroup;
+			children = (
+				A0000000000000000000000F /* KeychainStore.swift */,
+				A00000000000000000000010 /* TemplateCrypto.swift */,
+			);
+			path = Security;
+			sourceTree = "<group>";
+		};
+		F00000000000000000000009 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A00000000000000000000011 /* AuditLogStore.swift */,
+				A00000000000000000000012 /* EncryptedTemplateStore.swift */,
+				A00000000000000000000013 /* FaceLibrary.swift */,
+				A00000000000000000000014 /* SettingsStore.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		F0000000000000000000000A /* Utilities */ = {
+			isa = PBXGroup;
+			children = (A00000000000000000000015 /* AppPaths.swift */,);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		F00000000000000000000010 /* Config */ = {
+			isa = PBXGroup;
+			children = (A0000000000000000000001E /* MacFaceAI.entitlements */,);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		F00000000000000000000011 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A00000000000000000000017 /* SwiftUI.framework */,
+				A00000000000000000000018 /* AVFoundation.framework */,
+				A00000000000000000000019 /* Vision.framework */,
+				A0000000000000000000001A /* CoreML.framework */,
+				A0000000000000000000001B /* LocalAuthentication.framework */,
+				A0000000000000000000001C /* Security.framework */,
+				A0000000000000000000001D /* CryptoKit.framework */,
+			);
+			sourceTree = "<group>";
+		};
+		F00000000000000000000012 /* Products */ = {
+			isa = PBXGroup;
+			children = (A0000000000000000000001F /* MacFaceAI.app */,);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D00000000000000000000001 /* MacFaceAI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D00000000000000000000003 /* Build configuration list for PBXNativeTarget "MacFaceAI" */;
+			buildPhases = (
+				E00000000000000000000002 /* Sources */,
+				E00000000000000000000001 /* Frameworks */,
+				E00000000000000000000003 /* Resources */,
+			);
+			buildRules = ();
+			dependencies = ();
+			name = MacFaceAI;
+			productName = MacFaceAI;
+			productReference = A0000000000000000000001F /* MacFaceAI.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D00000000000000000000002 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 2700;
+				TargetAttributes = {
+					D00000000000000000000001 = {CreatedOnToolsVersion = 27.2; };
+				};
+			};
+			buildConfigurationList = D00000000000000000000004 /* Build configuration list for PBXProject "MacFaceAI" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (en, Base,);
+			mainGroup = F00000000000000000000001;
+			productRefGroup = F00000000000000000000012 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (D00000000000000000000001 /* MacFaceAI */,);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E00000000000000000000003 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (B00000000000000000000016 /* Assets.xcassets in Resources */,);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E00000000000000000000002 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B00000000000000000000001 /* MacFaceAIApp.swift in Sources */,
+				B00000000000000000000002 /* ContentView.swift in Sources */,
+				B00000000000000000000003 /* BiometricAuthService.swift in Sources */,
+				B00000000000000000000004 /* PasswordService.swift in Sources */,
+				B00000000000000000000005 /* CameraEngine.swift in Sources */,
+				B00000000000000000000006 /* CameraService.swift in Sources */,
+				B00000000000000000000007 /* FaceAnalyzer.swift in Sources */,
+				B00000000000000000000008 /* FaceEmbedder.swift in Sources */,
+				B00000000000000000000009 /* FaceGeometry.swift in Sources */,
+				B0000000000000000000000A /* FaceImageProcessor.swift in Sources */,
+				B0000000000000000000000B /* LivenessDetector.swift in Sources */,
+				B0000000000000000000000C /* MatchPolicy.swift in Sources */,
+				B0000000000000000000000D /* Similarity.swift in Sources */,
+				B0000000000000000000000E /* AppModels.swift in Sources */,
+				B0000000000000000000000F /* KeychainStore.swift in Sources */,
+				B00000000000000000000010 /* TemplateCrypto.swift in Sources */,
+				B00000000000000000000011 /* AuditLogStore.swift in Sources */,
+				B00000000000000000000012 /* EncryptedTemplateStore.swift in Sources */,
+				B00000000000000000000013 /* FaceLibrary.swift in Sources */,
+				B00000000000000000000014 /* SettingsStore.swift in Sources */,
+				B00000000000000000000015 /* AppPaths.swift in Sources */,
+				B0000000000000000000001E /* CameraPreview.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C00000000000000000000001 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = ("DEBUG=1", "$(inherited)",);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C00000000000000000000002 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C00000000000000000000003 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Config/MacFaceAI.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSCameraUsageDescription = "MacFace AI uses the camera to detect and analyze faces on this Mac.";
+				INFOPLIST_KEY_NSHighResolutionCapable = YES;
+				LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/../Frameworks",);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.macfaceai.MacFaceAI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				ARCHS = arm64;
+			};
+			name = Debug;
+		};
+		C00000000000000000000004 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = Config/MacFaceAI.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.utilities";
+				INFOPLIST_KEY_NSCameraUsageDescription = "MacFace AI uses the camera to detect and analyze faces on this Mac.";
+				INFOPLIST_KEY_NSHighResolutionCapable = YES;
+				LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/../Frameworks",);
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.macfaceai.MacFaceAI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SUPPORTED_PLATFORMS = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_STRICT_CONCURRENCY = complete;
+				SWIFT_VERSION = 6.0;
+				ARCHS = arm64;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D00000000000000000000003 /* Build configuration list for PBXNativeTarget "MacFaceAI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (C00000000000000000000003 /* Debug */, C00000000000000000000004 /* Release */,);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		D00000000000000000000004 /* Build configuration list for PBXProject "MacFaceAI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (C00000000000000000000001 /* Debug */, C00000000000000000000002 /* Release */,);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D00000000000000000000002 /* Project object */;
+}

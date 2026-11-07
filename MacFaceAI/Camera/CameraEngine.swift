@@ -62,8 +62,9 @@ final class CameraEngine: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate
             guard !askedPermission else { return }
             askedPermission = true
             emit(status: .requestingPermission)
-            AVCaptureDevice.requestAccess(for: .video) { [weak self] granted in
-                self?.sessionQueue.async {
+            let sessionQueue = self.sessionQueue
+            AVCaptureDevice.requestAccess(for: .video) { [weak self, sessionQueue] granted in
+                sessionQueue.async { [weak self] in
                     guard let self else { return }
                     self.askedPermission = false
                     if granted {
@@ -129,7 +130,7 @@ final class CameraEngine: NSObject, AVCaptureVideoDataOutputSampleBufferDelegate
             }
             if connection.isVideoMirroringSupported {
                 connection.automaticallyAdjustsVideoMirroring = false
-                connection.isVideoMirroringEnabled = false
+                connection.isVideoMirrored = false
             }
         }
 
